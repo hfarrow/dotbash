@@ -41,8 +41,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ./bash_aliases ]; then
+    . ./bash_aliases
 fi
 
 
@@ -53,8 +53,4 @@ fi
 # Powerline {{{
 export PATH=$HOME/.local/bin:$PATH
 . ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
-# }}}
-
-# Aliases {{{
-alias ll="ls -al"
 # }}}
