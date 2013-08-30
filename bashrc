@@ -43,6 +43,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 if [ -f ./bash_aliases ]; then
     . ./bash_aliases
+elif [ -f ~/.dotconfig/dotbash/bash_aliases ]; then
+    . ~/.dotconfig/dotbash/bash_aliases
 fi
 
 
