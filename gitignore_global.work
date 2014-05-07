@@ -1,0 +1,10 @@
+// OS X
+.DS_Store
+.DS_Store?
+
+// Vim
+*.swp
+
+tags
+lib_external
+deploy/console.swf
