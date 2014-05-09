@@ -6,5 +6,12 @@ ln -s $DIR/ctags ~/.ctags
 ln -s $DIR/git-completion.sh ~/.git-completion.sh
 ln -s $DIR/git-prompt.sh ~/.git-prompt.sh
 
-read -e -p "Enter configuration name (eg: work-mac): " CONFIG_NAME
-. $DIR/$CONFIG_NAME/setup.sh
+echo "----------------------------------------------------------------------------------------"
+echo "Please select a configuration by entering the configuration number and pressing enter: "
+echo "----------------------------------------------------------------------------------------"
+select CONFIG_NAME in home-mint work-mac
+do
+    echo "Setting up [${CONFIG_NAME}]."
+    . $DIR/$CONFIG_NAME/setup.sh
+    exit
+done
