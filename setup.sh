@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Setting up common configuration."
-files=(ctags git-completion.sh git-prompt.sh)
+files=(ctags)
 for i in "${files[@]}"
 do
 	echo "Creating symbolic link: ~/.${i} -> ${DIR}/${i}"

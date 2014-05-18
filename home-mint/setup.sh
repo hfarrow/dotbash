@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-files=(bashrc)
+files=(bashrc gitconfig)
 for i in "${files[@]}"
 do
 	echo "Creating symbolic link: ~/.${i} -> ${DIR}/${i}"
