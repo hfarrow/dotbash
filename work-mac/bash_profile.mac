@@ -1,0 +1,38 @@
+alias open_aliases='open ~/.bash_profile'
+alias open_mm='open ~/mm.cfg'
+alias cd_data='cd /Volumes/Data/'
+alias cd_os='cd /Volumes/OS/'
+alias cd_bin='cd /Volumes/Data/bin'
+alias flashlog='tail -f "/Users/farrh009/Library/Preferences/Macromedia/Flash Player/Logs/flashlog.txt"'
+alias ll='ls -al'
+alias hl='haxelib'
+
+export PATH="/usr/local/bin:$PATH:~/Library/Python/2.7/bin"
+export HAXE_STD_PATH="/usr/local/lib/haxe/std"
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+else
+	echo "Could not find the bash completion script."
+fi
+
+source ~/.git-prompt.sh
+source ~/.git-completion.sh
+
+export CLICOLOR=1
+export LSCOLORS=gxFxBxDxCxegedabagacad
+
+function prompt
+{
+local WHITE="\[\033[1;37m\]"
+local GREEN="\[\033[0;32m\]"
+local CYAN="\[\033[0;36m\]"
+local GRAY="\[\033[0;37m\]"
+local BLUE="\[\033[0;94m\]"
+export PS1="
+${GREEN}\u${CYAN}@${BLUE}\h ${CYAN}\w"' $(__git_ps1 "(%s)") '"${GRAY}"
+}
+#prompt
+
+
+. ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
