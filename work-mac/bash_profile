@@ -7,7 +7,7 @@ alias flashlog='tail -f "/Users/farrh009/Library/Preferences/Macromedia/Flash Pl
 alias ll='ls -al'
 alias hl='haxelib'
 
-export PATH="/usr/local/bin:$PATH:~/Library/Python/2.7/bin"
+export PATH="/usr/local/bin:$PATH:~/Library/Python/2.7/bin:/Applications/adt-bundle-mac-x86_64-20140321/AIRSDK_Compiler/bin"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
