@@ -2,8 +2,10 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+mkdir -p ~/.config
+
 echo "Setting up common configuration."
-files=(ctags)
+files=(ctags config/powerline)
 for i in "${files[@]}"
 do
 	echo "Creating symbolic link: ~/.${i} -> ${DIR}/${i}"

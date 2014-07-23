@@ -10,11 +10,11 @@ alias hl='haxelib'
 export PATH="/usr/local/bin:$PATH:~/Library/Python/2.7/bin:/Applications/adt-bundle-mac-x86_64-20140321/AIRSDK_Compiler/bin"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-else
-	echo "Could not find the bash completion script."
-fi
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#     . $(brew --prefix)/etc/bash_completion
+# else
+# 	echo "Could not find the bash completion script."
+# fi
 
 source ~/.git-prompt.sh
 source ~/.git-completion.sh
@@ -32,7 +32,7 @@ local BLUE="\[\033[0;94m\]"
 export PS1="
 ${GREEN}\u${CYAN}@${BLUE}\h ${CYAN}\w"' $(__git_ps1 "(%s)") '"${GRAY}"
 }
-#prompt
+prompt
 
 
 . ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
