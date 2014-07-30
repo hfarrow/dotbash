@@ -6,9 +6,11 @@ alias cd_bin='cd /Volumes/Data/bin'
 alias flashlog='tail -f "/Users/farrh009/Library/Preferences/Macromedia/Flash Player/Logs/flashlog.txt"'
 alias ll='ls -al'
 alias hl='haxelib'
+alias vim=/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
 
 export PATH="/usr/local/bin:$PATH:~/Library/Python/2.7/bin:/Applications/adt-bundle-mac-x86_64-20140321/AIRSDK_Compiler/bin"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
+export EDITOR=vim
 
 # if [ -f $(brew --prefix)/etc/bash_completion ]; then
 #     . $(brew --prefix)/etc/bash_completion
@@ -33,6 +35,5 @@ export PS1="
 ${GREEN}\u${CYAN}@${BLUE}\h ${CYAN}\w"' $(__git_ps1 "(%s)") '"${GRAY}"
 }
 prompt
-
 
 . ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
