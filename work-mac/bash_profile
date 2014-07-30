@@ -10,7 +10,7 @@ alias vim=/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
 
 export PATH="/usr/local/bin:$PATH:~/Library/Python/2.7/bin:/Applications/adt-bundle-mac-x86_64-20140321/AIRSDK_Compiler/bin"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
-export EDITOR=vim
+export EDITOR=/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
 
 # if [ -f $(brew --prefix)/etc/bash_completion ]; then
 #     . $(brew --prefix)/etc/bash_completion
