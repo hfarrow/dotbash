@@ -8,9 +8,21 @@ alias ll='ls -al'
 alias hl='haxelib'
 alias vim=/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
 
-export PATH="/usr/local/bin:$PATH:~/Library/Python/2.7/bin:/Applications/adt-bundle-mac-x86_64-20140321/AIRSDK_Compiler/bin"
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:~/Library/Python/2.7/bin"
+export PATH="$PATH:/Applications/adt-bundle-mac-x86_64-20140321/AIRSDK_Compiler/bin"
+export PATH="$PATH:~/cpdev/products/cpmobile/DisneyApportable/bin"
+export PATH="$PATH:~/cpdev/scripts/bin"
+export PATH="$PATH:/Users/farrh009/Library/Android/sdk/platform-tools"
+export PATH="$PATH:/Users/farrh009/Library/Android/sdk/tools"
+export PATH="$PATH:/Users/farrh009/Library/Android/android-ndk-r10d"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 export EDITOR=/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
+export P4CONFIG=.p4config
+export P4IGNORE=.gitignore
+export RUST_SRC_PATH=/Library/Caches/Homebrew/rust--git/src
 
 # if [ -f $(brew --prefix)/etc/bash_completion ]; then
 #     . $(brew --prefix)/etc/bash_completion
@@ -36,4 +48,4 @@ ${GREEN}\u${CYAN}@${BLUE}\h ${CYAN}\w"' $(__git_ps1 "(%s)") '"${GRAY}"
 }
 prompt
 
-. ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+# . ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
