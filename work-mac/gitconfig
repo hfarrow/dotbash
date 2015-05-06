@@ -2,7 +2,7 @@
 	name = Heath Farrow
 	email = heath.farrow@disney.com
 [core]
-	editor = /usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
+	editor = /usr/local/Cellar/macvim/7.4-76/MacVim.app/Contents/MacOS/Vim
 	excludesfile = /Users/farrh009/.gitignore_global
 	autocrlf = input
 [color]
