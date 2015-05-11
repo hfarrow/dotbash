@@ -48,4 +48,8 @@ ${GREEN}\u${CYAN}@${BLUE}\h ${CYAN}\w"' $(__git_ps1 "(%s)") '"${GRAY}"
 }
 prompt
 
-# . ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+# Powerline Setup
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
