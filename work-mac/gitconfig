@@ -1,8 +1,8 @@
 [user]
 	name = Heath Farrow
-	email = heath.farrow@disney.com
+	email = heath.farrow@gmail.com
 [core]
-	editor = /usr/local/Cellar/macvim/7.4-76/MacVim.app/Contents/MacOS/Vim
+	editor = nvim
 	excludesfile = /Users/farrh009/.gitignore_global
 	autocrlf = input
 [color]
@@ -12,6 +12,8 @@
 	ui = auto
 [push]
 	default = simple
+[pull]
+	rebase = true
 [merge]
 	tool = diffmerge
 [mergetool "diffmerge"]
@@ -32,3 +34,8 @@
     ad = add -A --verbose .
 [gui]
 	diffcontext = 20
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

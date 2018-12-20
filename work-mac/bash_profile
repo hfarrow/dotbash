@@ -6,23 +6,33 @@ alias cd_bin='cd /Volumes/Data/bin'
 alias flashlog='tail -f "/Users/farrh009/Library/Preferences/Macromedia/Flash Player/Logs/flashlog.txt"'
 alias ll='ls -al'
 alias hl='haxelib'
-alias vim=/usr/local/Cellar/macvim/7.4-76/MacVim.app/Contents/MacOS/Vim
+# alias vim=/usr/local/Cellar/macvim/7.4-76/MacVim.app/Contents/MacOS/Vim
+alias vim=nvim
+alias nw=/Applications/nwjs/nwjs.app/Contents/MacOS/nwjs
 
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+#export LC_CTYPE=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt:$PATH"
 export PATH="$PATH:~/Library/Python/2.7/bin"
 export PATH="$PATH:~/cpdev/scripts/bin"
-export PATH="$PATH:/Users/farrh009/Library/Android/sdk/platform-tools"
-export PATH="$PATH:/Users/farrh009/Library/Android/sdk/tools"
-export PATH="$PATH:/Users/farrh009/Library/Android/android-ndk-r10d"
-export HAXE_STD_PATH="/usr/local/lib/haxe/std"
+export PATH="$PATH:~/.cargo/bin"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export EDITOR=/usr/local/Cellar/macvim/7.4-76/MacVim.app/Contents/MacOS/Vim
 export P4CONFIG=.p4config
-export RUST_SRC_PATH=/Library/Caches/Homebrew/rust--git/src
-export HOMEBREW_GITHUB_API_TOKEN=737638468485ce9d74919803164d66194f9c4222
+export HOMEBREW_GITHUB_API_TOKEN=f666454d00e0aef8fff4c89c4578bfb405980b55
+
+# Avoid duplicates
+export HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7.0_79`
+export ANDROID_NDK_ROOT=~/Library/Android/android-ndk-r10d
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+export UNITY_HOME=/Applications/Unity
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools:~/bin:$ANDROID_SDK_ROOT/tools
 
 # if [ -f $(brew --prefix)/etc/bash_completion ]; then
 #     . $(brew --prefix)/etc/bash_completion
@@ -55,3 +65,6 @@ POWERLINE_BASH_SELECT=1
 . /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 [ -s "/Users/farrh009/.dnx/dnvm/dnvm.sh" ] && . "/Users/farrh009/.dnx/dnvm/dnvm.sh" # Load dnvm
+
+# FZF
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
