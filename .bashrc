@@ -23,6 +23,9 @@ export PATH="$GEM_HOME/bin:$PATH"
 source $BASHRC_PATH/.git-prompt.sh
 source $BASHRC_PATH/.git-completion.bash
 
+# Rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
