@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export EDITOR=nvim
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -52,7 +54,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -104,8 +106,18 @@ RC_PATH="`dirname \"$RC_PATH\"`"
 if [ -f $RC_PATH/.aliases ]; then
     source $RC_PATH/.aliases
 fi
+# Functions
+if [ -f $RC_PATH/.functions ]; then
+    source $RC_PATH/.functions
+fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# WORK SPECIFIC
+ export PATH=/opt/gradle/gradle-6.9.1/bin:$PATH
+ export PATH=~/Library/Android/sdk/platform-tools:$PATH
+
+source /Users/hfarrow/.config/broot/launcher/bash/br
