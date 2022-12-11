@@ -1,8 +1,11 @@
-# Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
+case `uname` in
+    Darwin) IS_MACOS=1 ;;
+    Linux) IS_LINUX=1 ;;
+esac
 
-# Added by Toolbox App
-export PATH="$PATH:/Users/hfarrow/Library/Application Support/JetBrains/Toolbox/scripts"
+if [ "$IS_MACOS" ] 
+then 
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 export LANG=en_US.UTF-8
-

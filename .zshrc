@@ -72,7 +72,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aliases ag colored-man-pages common-aliases python ripgrep extract thefuck )
+plugins=(git aliases ag colored-man-pages common-aliases python ripgrep extract thefuck)
 plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
 # Plugins to add later: adb
 
@@ -102,22 +102,11 @@ export LANG=en_US.UTF-8
 #
 RC_PATH="`readlink -f ~/.zshrc`"
 RC_PATH="`dirname \"$RC_PATH\"`"
-# Aliases
-if [ -f $RC_PATH/.aliases ]; then
-    source $RC_PATH/.aliases
-fi
-# Functions
-if [ -f $RC_PATH/.functions ]; then
-    source $RC_PATH/.functions
-fi
+# Additional local zsh scripts
+[ -f $RC_PATH/.aliases ] && source $RC_PATH/.aliases
+[ -f $RC_PATH/.functions ] && source $RC_PATH/.functions
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
+# Additional external zsh scripts
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# WORK SPECIFIC
- export PATH=/opt/gradle/gradle-6.9.1/bin:$PATH
- export PATH=~/Library/Android/sdk/platform-tools:$PATH
-
-source /Users/hfarrow/.config/broot/launcher/bash/br
+[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+[ "$IS_MACOS" ] && [ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
