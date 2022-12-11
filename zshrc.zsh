@@ -14,6 +14,8 @@ fi
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH=/opt/gradle/gradle-6.9.1/bin:$PATH
+export PATH=~/Library/Android/sdk/platform-tools:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

@@ -10,3 +10,6 @@ fi
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/hfarrow/Library/Application Support/JetBrains/Toolbox/scripts"
