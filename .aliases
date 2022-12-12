@@ -1,1 +1,8 @@
 alias ll="ls -alF"
+alias lg=lazygit
+
+if [ "$IS_LINUX" ] 
+then 
+    alias bat=batcat
+    alias delta=git-detla
+fi
