@@ -1,3 +1,7 @@
+# You may need to manually set your language environment
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -91,9 +95,6 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -112,8 +113,8 @@ export LANG=en_US.UTF-8
 RC_PATH="`readlink -f ~/.zshrc`"
 RC_PATH="`dirname \"$RC_PATH\"`"
 # Additional local zsh scripts
-[ -f $RC_PATH/.aliases ] && source $RC_PATH/.aliases
-[ -f $RC_PATH/.functions ] && source $RC_PATH/.functions
+[ -f $RC_PATH/aliases.zsh ] && source $RC_PATH/aliases.zsh
+[ -f $RC_PATH/functions.zsh ] && source $RC_PATH/functions.zsh
 
 # Additional external zsh scripts
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -122,3 +123,9 @@ RC_PATH="`dirname \"$RC_PATH\"`"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /home/hfarrow/.config/broot/launcher/bash/br
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

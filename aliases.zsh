@@ -1,5 +1,6 @@
 alias ll="ls -alF"
 alias lg=lazygit
+alias luamake=~/.config/lsp/lua-language-server/3rd/luamake/luamake
 
 if [ "$IS_LINUX" ] 
 then 
