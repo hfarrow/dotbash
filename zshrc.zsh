@@ -127,7 +127,10 @@ RC_PATH="`dirname \"$RC_PATH\"`"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /home/hfarrow/.config/broot/launcher/bash/br
+if [ "$IS_LINUX" ]
+then
+    source /Users/hfarrow/.config/broot/launcher/bash/br
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -135,5 +138,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # Prevent tools console commit hook from hanging when checking our a branch
 export GRYPHON_TOOLS_CONSOLE_HOOK_BUILD_DISABLED=1
-
-source /Users/hfarrow/.config/broot/launcher/bash/br
