@@ -132,3 +132,8 @@ source /home/hfarrow/.config/broot/launcher/bash/br
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Prevent tools console commit hook from hanging when checking our a branch
+export GRYPHON_TOOLS_CONSOLE_HOOK_BUILD_DISABLED=1
+
+source /Users/hfarrow/.config/broot/launcher/bash/br

@@ -1,6 +1,6 @@
 # Tail log file with bat
 btail() {
-    tail -f $1 | bat --paging=never -l log
+    tail -n 80 -f $1 | bat --paging=never -l log
 }
 
 # Open nearest unity editor log

@@ -7,3 +7,7 @@ then
     alias bat=batcat
     alias delta=git-detla
 fi
+if [ "$IS_MACOS"]
+then
+    alias python2="/Users/hfarrow/.pyenv/versions/2.7.18/bin/python"
+fi
