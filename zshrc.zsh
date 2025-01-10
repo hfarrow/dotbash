@@ -16,6 +16,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=/opt/gradle/gradle-6.9.1/bin:$PATH
 export PATH=~/Library/Android/sdk/platform-tools:$PATH
+export PATH=~/Library/Android/sdk/cmdline-tools/latest/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -136,5 +137,41 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+source /Users/hfarrow/.config/broot/launcher/bash/br
+
 # Prevent tools console commit hook from hanging when checking our a branch
 export GRYPHON_TOOLS_CONSOLE_HOOK_BUILD_DISABLED=1
+export PATH="/Applications/GameBench/GameBench/lib:$PATH"
+export VAULT_ADDR="https://usw4.se.vault.skugry.dev"
+
+# Android For Unity Source 2019.3.9f1
+export ANDROID_SDK_ROOT="/Users/hfarrow/Library/Android/sdk"
+export ANDROID_NDK_ROOT="/Users/hfarrow/Library/Android/sdk/ndk/21.3.6528147"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
+
+#compdef gt
+###-begin-gt-completions-###
+#
+# yargs command completion script
+#
+# Installation: gt completion >> ~/.zshrc
+#    or gt completion >> ~/.zprofile on OSX.
+#
+_gt_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" gt --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  _describe 'values' reply
+}
+compdef _gt_yargs_completions gt
+###-end-gt-completions-###
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/hfarrow/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hfarrow/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/hfarrow/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hfarrow/google-cloud-sdk/completion.zsh.inc'; fi
