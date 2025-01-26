@@ -100,3 +100,5 @@ export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export GEM_HOME=~/.gem
+
+export GPG_TTY=$(tty)
