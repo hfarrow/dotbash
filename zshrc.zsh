@@ -94,3 +94,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source ~/.config/broot/launcher/bash/br
+
+# Brew managed installation of Ruby
+export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH
+export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export GEM_HOME=~/.gem
